@@ -6,22 +6,14 @@ var concat = require('broccoli-sourcemap-concat');
 var vendorJs = concat('bower_components', {
   inputFiles: [
     'jquery/dist/jquery.min.js',
-    'handlebars/handlebars.runtime.min.js',
-    'underscore/underscore-min.js',
-    'backbone/backbone-min.js'
+    'handlebars/handlebars.min.js',
   ],
   outputFile: 'vendor.js'
 });
 
-var assetsWithTemplates = handlebars('assets', {
-  srcDir: 'templates',
-  namespace: 'AppTemplates'
-});
-
-var appJs = concat(assetsWithTemplates, {
+var appJs = concat('assets', {
   inputFiles: [
-    'js/setup.js',
-    'templates/**/*.js'
+    'js/app.js',
     /* Your app files here */
   ],
   outputFile: 'app.js'

@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <div id="target"></div>
+    <div id="profile-target"></div>
+
+    <template id="profile-template">
+        <img src="{{avatar_url}}" alt="">
+        <h2>{{name}}</h2>
+        <h4>{{login}}</h4>
+    </template>
+
 
     <script src="vendor.js"></script>
     <script src="app.js"></script>
